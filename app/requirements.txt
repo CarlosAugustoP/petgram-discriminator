@@ -1,0 +1,6 @@
+Flask
+Flask-Swagger-UI
+tensorflow
+tensorflow-datasets
+numpy
+
