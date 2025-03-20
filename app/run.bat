@@ -4,4 +4,4 @@ REM
 docker build -t animal_discriminator .
 
 REM 
-docker run -p 5001:5001 animal_discriminator:latest
+docker run -p 5000:5000 animal_discriminator:latest

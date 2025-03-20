@@ -35,7 +35,6 @@ def create_and_train_model():
                 loss='binary_crossentropy',
                 metrics=['accuracy'])
 
-    # Treinar e salvar modelo
     model.fit(train_dataset, epochs=10, validation_data=test_dataset)
     model.save(MODEL_PATH)
     
