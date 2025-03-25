@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 import numpy as np
+from flask_cors import CORS
 from io import BytesIO
 from keras._tf_keras.keras.preprocessing import image
 from model import create_and_train_model, load_model
@@ -7,10 +8,13 @@ import os
 from flask_swagger_ui import get_swaggerui_blueprint
 from dotenv import load_dotenv
 
+
 # Carrega variáveis de ambiente ANTES de inicializar o app
 load_dotenv('.env')
 
 app = Flask(__name__)
+CORS(app, resources={r"/predict": {"origins": "https://localhost:63613"}})
+
 
 # Configuração do Swagger
 SWAGGER_URL = '/api/docs'
